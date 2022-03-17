@@ -11,6 +11,7 @@ class Login  extends Component {
             <div className="main-body">
                 <div className="body">
                     <Uname />
+                    <Passw />
                     <Gambar/>
                 </div>
             </div> 

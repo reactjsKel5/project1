@@ -3,6 +3,7 @@ import  "bootstrap/dist/css/bootstrap.css";
 import "./pages/login/login.css";
 import React, {Component} from 'react';
 import Logowelcome from './Icon.png'
+import "./pages/login/uname";
 
 class Login  extends Component {
     render() {
@@ -16,6 +17,7 @@ class Login  extends Component {
                         <div className="container-right">
                         <div className="card">
                             <div className="card-body">
+                                <Uname />
                             </div>
                         </div>
                         </div>

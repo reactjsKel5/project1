@@ -16,9 +16,6 @@ class Login  extends Component {
                         <div className="container-right">
                         <div className="card">
                             <div className="card-body">
-                            <h3 className="mb-5">Hi, Welcome Back!</h3>
-                            <form action="submit">
-                            </form>
                             </div>
                         </div>
                         </div>

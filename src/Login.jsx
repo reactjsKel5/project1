@@ -1,27 +1,31 @@
 import  "bootstrap/dist/css/bootstrap.css";
 //import React from "react";
-import "./Login.css";
+import "./pages/login/login.css";
 import React, {Component} from 'react';
 import Logowelcome from './Icon.png'
 
 class Login  extends Component {
     render() {
         return (
-            <div className="main-body">
-                <div>
-            <h2 className="title">Choose Youre 
-            <br/>The Best Skincare</h2>
-            
-            <img className="image" src={Logowelcome} alt="logo"/>
+            <div>
+                <main>
+                    <div className="row">
+                    <div className="col col-left pt-5">
+                    </div>
+                    <div className="col col-right pt-5 pb-m-5">
+                        <div className="container-right">
+                        <div className="card">
+                            <div className="card-body">
+                            <h3 className="mb-5">Hi, Welcome Back!</h3>
+                            <form action="submit">
+                            </form>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+                </main>
             </div>
-                <div className="body">
-                <div className='font-poppins'>
-                <h3>Hi, Welcome Back!</h3>
-                <input type="text" className="username" placeholder="Username"/>
-                <input type="text" className="password" placeholder="Password"/>
-            </div>
-                </div>
-            </div> 
         );
     }
 }

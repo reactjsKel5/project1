@@ -5,7 +5,7 @@ class Passw extends Component {
         return (
             <div>
             <label htmlFor="Password" className="form-label">Password</label>
-            <input className='form-control' type="text" id='password'/>
+            <input className='form-control' type="password" id='password' securityTextEntry={true}/>
             </div>
         )
     }

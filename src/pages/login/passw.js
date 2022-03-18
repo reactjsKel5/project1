@@ -4,7 +4,7 @@ class Passw extends Component {
     render(){
         return (
             <div>
-            <label htmlFor="Password" className="form-label">Password</label>
+            <label htmlFor="Password" className="form-label" class = 'mt-5'>Password</label>
             <input className='form-control' type="text" id='password'/>
             </div>
         )

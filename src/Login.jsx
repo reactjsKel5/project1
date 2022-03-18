@@ -3,7 +3,7 @@ import  "bootstrap/dist/css/bootstrap.css";
 import "./pages/login/login.css";
 import React, {Component} from 'react';
 import Logowelcome from './Icon.png'
-import "./pages/login/uname";
+import Uname "./pages/login/uname";
 
 class Login  extends Component {
     render() {
@@ -17,6 +17,8 @@ class Login  extends Component {
                         <div className="container-right">
                         <div className="card">
                             <div className="card-body">
+                            <h3 className="mb-5">Hi, Welcome Back!</h3>
+                            <form action="submit">
                                 <Uname />
                             </div>
                         </div>

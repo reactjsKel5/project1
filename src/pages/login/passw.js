@@ -1,11 +1,11 @@
 import { Component } from "react";
-import './passw.css';
-
+import './login.css';
 class Passw extends Component {
     render(){
         return (
-            <div className='font-poppins'>
-                <input className='pass' type="text " placeholder="Password"/>
+            <div>
+            <label htmlFor="Password" className="form-label">Password</label>
+            <input className='form-control' type="text" id='password'/>
             </div>
         )
     }

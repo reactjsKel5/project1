@@ -49,6 +49,7 @@ form input {
     border-radius: 30px;
     /* margin: 0 -10% !important; */
     padding: 76px;
+    margin-top: 50px;
 }
 
 @media screen and (max-width: 1200px) {

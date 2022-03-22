@@ -13,7 +13,14 @@ class Login  extends Component {
                         <div className="col col-left p-5 text-center d-flex justify-content-center">
                         <img src={pictLogin} className="m-auto" alt="login image" />
                         </div>
-                        
+                        <div className="col align-self-center d-flex justify-content-center">
+                        <div className="card">
+                            <div className="card-body">
+                                <h3>Selamat Datang!</h3>
+                                <p>Masukkan email dan password Anda</p>    
+                            </div>                        
+                        </div>
+                        </div>
                     </div>
                 </main>
             </div>

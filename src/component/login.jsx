@@ -23,6 +23,8 @@ class Login extends Component {
                                     {/* Untuk username pengerjaan nabiyla */}
                                     <input type="text" placeholder="Email" className="form-control mb-3 mt-5" id="username" aria-describedby="emailHelp" />
                                     <input type="password" placeholder="Password" className="form-control" id="password" />
+                                    <p className="text-center mt-5">Belum memiliki akun? <a href="#">Daftar</a></p>
+                                    <button type="submit" className="btn btn-primary">Masuk</button>
                                 </form>
                             </div>
                         </div>

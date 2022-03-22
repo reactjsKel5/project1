@@ -1,0 +1,22 @@
+main {
+    font-family: 'Poppins';
+}
+.row {
+    min-height: 900px;
+}
+.col-left {
+    background: #FB4F4F;
+}
+
+
+@media screen and (max-width: 768px) {
+    .col-left img {
+        max-width: 300px;
+    }
+    .card {
+        margin-top: 50px;
+        margin-bottom: 50px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+}

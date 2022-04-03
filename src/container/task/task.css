@@ -1,0 +1,68 @@
+* {
+    font-family: 'Poppins', 'Sans-serif';
+}
+
+.card {
+    border: 1px solid rgba(0, 0, 0, 0.22);
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+
+.add-task input {
+    height: 60px;
+    color: #9F9F9F !important;
+    font-size: 16px;
+    border-radius: 10px;
+}
+
+.form-control:focus {
+    box-shadow: none;
+    border: 1px solid rgba(196, 196, 196, 0.71);
+}
+
+.add-task button {
+    width: 141px;
+    height: 39px;
+    border-radius: 8px;
+    background: #FB4F4F;
+}
+
+label .form-check-label {
+    font-weight: 400;
+    font-size: 16px;
+    color: #464646;
+} */ */
+
+.task .btn-delete {
+    border: none;
+    background: transparent !important;
+    font-size: 20px;
+    color: #FB4F4F;
+}
+
+.todolist .btn-delete:hover {
+    color: #FB4F4F;
+    transition: 0.3s;
+}
+
+.btn-light:hover {
+    color: #FB4F4F;
+    transition: 0.5s;
+}
+
+@media only screen and (max-width: 600px){
+    .add-todolist {
+        margin-top: 20px;
+    }
+    .todolist {
+        margin-top: 10px;
+    }
+    .add-todolist,
+    .todolist {
+        margin-left: 5%;
+    }
+    .add-todolist button {
+        margin-top: 15px !important;
+        width: 100%;
+    }
+}

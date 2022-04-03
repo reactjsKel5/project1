@@ -1,0 +1,11 @@
+{
+"task" : [
+    {
+      "id_task": 1, 
+      "uid": 1,
+      "detail_task": "Mobile App Tugas",
+      "tgl_ddline": "2022-05-30",
+      "jenis": "Task"
+    }
+  ]
+}

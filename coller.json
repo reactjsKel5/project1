@@ -68,11 +68,28 @@
     ],
     "todolist": [
         {
-            "id_todolist": 1,
+            "id": 1,
             "uid": 1,
-            "nama_todolist": "Edit profil mobile app",
-            "status": 0,
-            "tgl_todolist": "2022-02-24"
+            "nama_todo": "Edit profil mobile app",
+            "status": 0
+        },
+        {
+            "id": 1648857353637,
+            "uid": 1,
+            "nama_todo": "Finishing page todolist reactjs",
+            "status": 0
+        },
+        {
+            "id": 1648857389299,
+            "uid": 1,
+            "nama_todo": "Read atomics habits 15 page",
+            "status": 0
+        },
+        {
+            "id": 1648857523707,
+            "uid": 1,
+            "nama_todo": "Try new hobby",
+            "status": 0
         }
     ],
     "profile": [

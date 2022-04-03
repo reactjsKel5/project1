@@ -42,8 +42,8 @@ class Todolist extends Component {
     }
 
     // delete all todolist
-    deleteAllTodolist = () => {
-        fetch(`http://localhost:3001/todolist`, {
+    deleteAllTodolist = (uid) => {
+        fetch(`http://localhost:3001/todolist/${uid}`, {
             method: 'DELETE'
         })
             .then(json => {

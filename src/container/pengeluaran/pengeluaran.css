@@ -1,0 +1,117 @@
+* {
+    font-family: 'Poppins', 'Sans-serif';
+}
+
+.card {
+    border: 1px solid rgba(0, 0, 0, 0.22);
+    box-sizing: border-box;
+    border-radius: 22px;
+}
+
+.content h2 {
+    font-weight: 600;
+    font-size: 28px;
+    color: #FB4F4F;
+}
+
+.content h3 {
+    font-size: 22px;
+    color: #464646;
+    font-weight: 600;
+}
+
+.date-picker a {
+    text-decoration: none;
+    font-size: 14px;
+    color: #ACACAC;
+}
+
+.date-picker a:hover {
+    color: #FB4F4F;
+}
+
+.dropdown-category .btn-light {
+    background: #fff;
+    border: 1px solid rgba(196, 196, 196, 0.71) !important;
+    border-radius: 11px;
+    height: 43px;
+    width: 100%;
+    font-size: 16px;
+    text-decoration: none;
+    text-align: left;
+    padding: 6px 24px;
+    color: #6b6b6b;
+}
+
+.add-income .dropdown-category .btn-light:hover {
+    color: #464646;
+}
+
+.add-income input {
+    height: 43px;
+    color: #9F9F9F !important;
+    font-size: 16px;
+    border-radius: 11px;
+}
+
+.form-control:focus {
+    box-shadow: none;
+    border: 1px solid rgba(196, 196, 196, 0.71);
+}
+
+.btn-danger {
+    background: #FB4F4F;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.25);
+    border-radius: 8px;
+    height: 39px;
+    width: 100%;
+}
+
+.dropdown-month .btn-light {
+    width: 100%;
+    background: #fff;
+    border: 1px solid #FB4F4F !important;
+    border-radius: 11px;
+    font-size: 14px;
+    border-radius: 14px;
+    color: #FB4F4F;
+}
+
+.btn-secondary {
+    border-radius: 11px;
+    text-align: right;
+}
+
+.content h5 {
+    color: #ACACAC;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.content h1 {
+    font-weight: 600;
+    font-size: 70px;
+    color: #464646;
+    letter-spacing: -0.01em;
+}
+
+.content small {
+    font-size: 12px;
+    color: #ACACAC;
+}
+.nama-presentase p,
+.nama-pemasukan p {
+    color: #464646;
+}
+.presentase p,
+.jumlah p {
+    color: #9F9F9F;
+}
+
+.delete button{
+    color:#9a9a9a;
+    border: none;
+}
+.delete button:hover {
+    color: #FB4F4F;
+}

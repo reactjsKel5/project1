@@ -13,7 +13,7 @@ import MenuCM from './container/menuCM/menuCM';
 //   document.getElementById('root')
 // );
 
-ReactDOM.render(<MenuCM/>, document.getElementById('root'));
+// ReactDOM.render(<MenuCM/>, document.getElementById('root'));
 // ReactDOM.render(<Todolist/>, document.getElementById('root'));
 // ReactDOM.render(<Pemasukan/>, document.getElementById('root'));
 ReactDOM.render(<Dashboard/>, document.getElementById('root'));

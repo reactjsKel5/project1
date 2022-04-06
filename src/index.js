@@ -4,6 +4,7 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import Dashboard from './container/dashboard/dashboard';
+import MenuCM from './container/menuCM/menuCM';
 
 // ReactDOM.render(
 //   <React.StrictMode>
@@ -12,6 +13,7 @@ import Dashboard from './container/dashboard/dashboard';
 //   document.getElementById('root')
 // );
 
+ReactDOM.render(<MenuCM/>, document.getElementById('root'));
 // ReactDOM.render(<Todolist/>, document.getElementById('root'));
 // ReactDOM.render(<Pemasukan/>, document.getElementById('root'));
 ReactDOM.render(<Dashboard/>, document.getElementById('root'));

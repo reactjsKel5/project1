@@ -5,6 +5,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import Dashboard from './container/dashboard/dashboard';
 import MenuCM from './container/menuCM/menuCM';
+import MenuMM from './container/menuMM/menuMM';
 
 // ReactDOM.render(
 //   <React.StrictMode>
@@ -13,6 +14,7 @@ import MenuCM from './container/menuCM/menuCM';
 //   document.getElementById('root')
 // );
 
+// ReactDOM.render(<MenuMM/>, document.getElementById('root'));
 // ReactDOM.render(<MenuCM/>, document.getElementById('root'));
 // ReactDOM.render(<Todolist/>, document.getElementById('root'));
 // ReactDOM.render(<Pemasukan/>, document.getElementById('root'));

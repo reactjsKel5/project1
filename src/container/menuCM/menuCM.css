@@ -1,0 +1,64 @@
+* {
+    font-family: 'Poppins';
+}
+
+.information h2 {
+    font-weight: 600;
+    font-size: 28px;
+    color: #FB4F4F;
+}
+
+.information p .sub-title {
+    font-size: 14px;
+    text-decoration-line: underline;
+}
+
+
+
+.information .card-danger {
+    background: #FB4F4F;
+    border: none;
+    box-sizing: border-box;
+    border-radius: 22px;
+    color: #fff;
+}
+
+.information .card h1 {
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 96px;
+}
+
+.information .card h4 {
+    font-weight: 600;
+    font-size: 28px;
+    margin: 0;
+}
+
+.information .card p {
+    font-size: 14px;
+}
+
+.menu a {
+    text-decoration: none;
+}
+
+.menu h3 {
+    font-weight: 600;
+    font-size: 32px;
+    color: #263238;
+}
+
+.menu p {
+    font-weight: 400;
+    font-size: 22px;
+    color: #FB4F4F
+}
+
+.menu .card {
+    background: linear-gradient(255deg, rgba(251, 79, 79, 0.2) 0%, rgba(255, 227, 227, 0.134) 98.58%), #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.13);
+    box-sizing: border-box;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.15);
+    border-radius: 22px;
+}

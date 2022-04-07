@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Sidebar from "../../component/menubar/sidebar";
 import Topbar from "../../component/menubar/topbar";
 import './menuMM.css';
+import {Link} from "react-router-dom";
 
 class MenuMM extends Component {
     render() {
@@ -16,7 +17,7 @@ class MenuMM extends Component {
                         <h2>Money Management.</h2>
                         <div className="row my-5">
                             <div className="col">
-                                <a href="#">
+                                <Link to="/Pemasukan">
                                     <div className="card">
                                         <div className="card-body m-4">
                                             <div className="row">
@@ -32,10 +33,11 @@ class MenuMM extends Component {
                                             </div>
                                         </div>
                                     </div>
-                                </a>
+                                </Link>
                             </div>
+                            
                             <div className="col">
-                                <a href="#">
+                                <Link to="/Pengeluaran">
                                     <div className="card">
                                         <div className="card-body m-4">
                                             <div className="row">
@@ -51,7 +53,7 @@ class MenuMM extends Component {
                                             </div>
                                         </div>
                                     </div>
-                                </a>
+                                </Link>
                             </div>
                         </div>
                     </div>

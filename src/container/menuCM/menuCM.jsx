@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Sidebar from "../../component/menubar/sidebar";
 import Topbar from "../../component/menubar/topbar";
 import './menuCM.css';
+import {Link} from "react-router-dom";
 
 class MenuCM extends Component {
     render() {
@@ -57,10 +58,11 @@ class MenuCM extends Component {
                                     </div>
                                 </div>
                             </div>
+
                             <h2>Menu.</h2>
                             <div className="row menu my-4">
                                 <div className="col">
-                                    <a href="#">
+                                    <Link to="/Notes">
                                         <div className="card menu-notes">
                                             <div className="card-body m-4">
                                                 <img src={require("../../img/ic_notes.png")} alt="ic_notes" />
@@ -68,10 +70,11 @@ class MenuCM extends Component {
                                                 <p>Catatan penting</p>
                                             </div>
                                         </div>
-                                    </a>
-                                </div>
+                                        </Link>
+                                        </div>
+
                                 <div className="col">
-                                    <a href="#">
+                                    <Link to = "/Schedule">
                                         <div className="card menu-schedule">
                                             <div className="card-body m-4">
                                                 <img src={require("../../img/ic_schedule.png")} alt="ic_notes" />
@@ -79,12 +82,13 @@ class MenuCM extends Component {
                                                 <p>Jadwal perkuliahan</p>
                                             </div>
                                         </div>
-                                    </a>
-                                </div>
-                            </div>
+                                        </Link>
+                                        </div>
+                                        </div>
+
                             <div className="row menu">
                                 <div className="col">
-                                    <a href="#">
+                                    <Link to="/Task">
                                         <div className="card menu-task">
                                             <div className="card-body m-4">
                                                 <img src={require("../../img/ic_task.png")} alt="ic_notes" />
@@ -92,10 +96,11 @@ class MenuCM extends Component {
                                                 <p>Daftar quiz, tugas, dan lainnya</p>
                                             </div>
                                         </div>
-                                    </a>
+                                    </Link>
                                 </div>
+
                                 <div className="col">
-                                    <a href="#">
+                                    <Link to="/Todolist">
                                         <div className="card menu-todolist">
                                             <div className="card-body m-4">
                                                 <img src={require("../../img/ic_todolist.png")} alt="ic_notes" />
@@ -103,7 +108,7 @@ class MenuCM extends Component {
                                                 <p>Daftar yang harus dilakukan</p>
                                             </div>
                                         </div>
-                                    </a>
+                                    </Link>
                                 </div>
                             </div>
                         </div>

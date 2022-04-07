@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Sidebar from "../../component/menubar/sidebar";
-import Task from "../../component/menubar/taskdel";
+// import Task from "../../component/menubar/taskdel";
 import Topbar from "../../component/menubar/topbar";
 import "./task.css";
 

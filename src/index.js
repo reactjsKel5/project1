@@ -6,6 +6,7 @@ import reportWebVitals from './reportWebVitals';
 import Dashboard from './container/dashboard/dashboard';
 import MenuCM from './container/menuCM/menuCM';
 import MenuMM from './container/menuMM/menuMM';
+import Income from './container/income/income';
 
 // ReactDOM.render(
 //   <React.StrictMode>
@@ -17,8 +18,8 @@ import MenuMM from './container/menuMM/menuMM';
 // ReactDOM.render(<MenuMM/>, document.getElementById('root'));
 // ReactDOM.render(<MenuCM/>, document.getElementById('root'));
 // ReactDOM.render(<Todolist/>, document.getElementById('root'));
-// ReactDOM.render(<Pemasukan/>, document.getElementById('root'));
-ReactDOM.render(<Dashboard/>, document.getElementById('root'));
+ReactDOM.render(<App/>, document.getElementById('root'));
+// ReactDOM.render(<Dashboard/>, document.getElementById('root'));
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))

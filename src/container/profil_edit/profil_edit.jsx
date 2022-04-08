@@ -29,6 +29,27 @@ class ProfilEdit extends Component {
                                     </div>
                                 </div>
                                 </div>
+                                <div div className="col d-flex justify-content-center">
+                                    <div className="form-edit">
+                                        <form action="submit">
+                                            <label htmlFor="nama" className="form-label ">Nama Lengkap</label>
+                                            <input type="text" className="form-control mb-3 mt-2" id="nama_lengkap" name="nama_lengkap" />
+
+                                            <label htmlFor="no-hp" className="form-label ">Nomor Telepon</label>
+                                            <input type="text" className="form-control mb-3 " id="no_hp" name="no_hp" />
+
+                                            <label htmlFor="email" className="form-label ">Email</label>
+                                            <input type="text" className="form-control mb-3 " id="email" name="email" aria-describedby="emailHelp" />
+
+                                            <label htmlFor="password" className="form-label ">Password</label>
+                                            <input type="password" className="form-control mb-3" id="password" name="password" />
+
+                                            <button type="submit" className="btn btn-danger">Hapus</button>
+                                            <button type="submit" className="btn btn-success ">Simpan</button>
+                                        </form>
+
+                                    </div>
+                                </div>
                             </div>
                             </div>
                         </div>

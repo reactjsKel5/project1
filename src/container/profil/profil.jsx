@@ -3,7 +3,7 @@ import Sidebar from "../component/menubar/sidebar";
 import Topbar from "../component/menubar/topbar";
 import './profil.css'
 
-import ProfileProps from "../../component/profilprops";
+import ProfileProps from "./profil.props/profilprops";
 
 class Profil extends Component {
 
@@ -42,38 +42,11 @@ class Profil extends Component {
                                     <br />
                                     <div class="card-text">
                                         <div className="row">
-                                            <div class="mb-4">
-                                                <p class="profile-title float-start">Nama Lengkap</p>
-                                                <p class="profile-title float-end">
-                                                {
-                                                    this.state.profile.map((profile) => {
-                                                        return <ProfileProps id={profile.id} key={profile.id} nama_lengkap={profile.nama_lengkap}/>
-                                                    })
-                                                }
-                                                </p>
-                                            </div>
-                                            <hr />
-                                            <div class="mb-4">
-                                                <p class="profile-title float-start">Email</p>
-                                                <p class="profile-value float-sm-end">
-                                                {
-                                                    this.state.profile.map((profile) => {
-                                                        return <ProfileProps id={profile.id} key={profile.id} email={profile.email}/>
-                                                    })
-                                                }
-                                                </p>
-                                            </div>
-                                            <hr />
-                                            <div class="mb-4">
-                                                <p class="profile-title float-start">Nomor Telepon</p>
-                                                <p class="profile-value float-sm-end">
-                                                {
-                                                    this.state.profile.map((profile) => {
-                                                        return <ProfileProps id={profile.id} key={profile.id} no_hp={profile.no_hp}/>
-                                                    })
-                                                }
-                                                </p>
-                                            </div>
+                                            {
+                                                this.state.profile.map((profile) => {
+                                                    return <ProfileProps id={profile.id} key={profile.id} nama_lengkap={profile.nama_lengkap} email={profile.email} no_hp={profile.no_hp} />
+                                                })
+                                            }
                                         </div>
                                     </div>
                                 </div>

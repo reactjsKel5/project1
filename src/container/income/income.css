@@ -2,16 +2,41 @@
     font-family: 'Poppins', 'Sans-serif';
 }
 
-.card {
-    border: 1px solid rgba(0, 0, 0, 0.22);
-    box-sizing: border-box;
-    border-radius: 22px;
-}
-
 .content h2 {
     font-weight: 600;
     font-size: 28px;
     color: #FB4F4F;
+}
+
+.card-tab-income {
+    width: 346px;
+    background: #FFFFFF;
+    border: 1px solid #CDCDCD;
+    box-sizing: border-box;
+    box-shadow: 19.37px 19.37px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 50px;
+}
+
+.btn-tab-income {
+    background: rgba(201, 95, 80, 0.27);
+    border-radius: 22px;
+}
+
+.card-tab-income a {
+    text-decoration: none;
+}
+
+.card-tab-income .btn-tab-income a {
+    font-weight: 500;
+    font-size: 18px;
+    color: #C95F50;
+    padding: 7px 23px;
+}
+
+.card-tab-income .link-to-outcome a {
+    font-weight: 400;
+    font-size: 18px;
+    color: #464646;
 }
 
 .content h3 {
@@ -20,14 +45,19 @@
     font-weight: 600;
 }
 
-.date-picker a {
-    text-decoration: none;
-    font-size: 14px;
+.content h5 {
     color: #ACACAC;
+    font-weight: 400;
+    font-size: 16px;
 }
 
-.date-picker a:hover {
-    color: #FB4F4F;
+/* Insert Income */
+.card-information-insert {
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.22);
+    box-sizing: border-box;
+    box-shadow: 19.23px 19.23px 15px rgba(38, 50, 56, 0.1);
+    border-radius: 30px;
 }
 
 .category-select {
@@ -41,13 +71,6 @@
     text-align: left;
     padding: 6px 24px;
     color: #6b6b6b;
-}
-.month-select{
-    cursor: pointer;
-    border: 1px solid rgba(0, 0, 0, 0.22);
-    box-sizing: border-box;
-    border-radius: 11px;
-    text-align: center;
 }
 
 .add-income .dropdown-category .btn-light:hover {
@@ -74,51 +97,35 @@
     width: 100%;
 }
 
-.dropdown-month .btn-light {
-    width: 100%;
-    background: #fff;
-    border: 1px solid #FB4F4F !important;
-    border-radius: 11px;
+.date-picker a {
+    text-decoration: none;
     font-size: 14px;
-    border-radius: 14px;
-    color: #FB4F4F;
-}
-
-.btn-secondary {
-    border-radius: 11px;
-    text-align: right;
-}
-
-.content h5 {
     color: #ACACAC;
-    font-weight: 400;
-    font-size: 16px;
 }
 
-.content h1 {
-    font-weight: 600;
-    font-size: 70px;
-    color: #464646;
-    letter-spacing: -0.01em;
+.date-picker a:hover {
+    color: #FB4F4F;
 }
 
 .content small {
     font-size: 12px;
     color: #ACACAC;
 }
-.nama-presentase p,
-.nama-pemasukan p {
-    color: #464646;
-}
-.presentase p,
-.jumlah p {
-    color: #9F9F9F;
+
+.card-income-list {
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.22);
+    box-sizing: border-box;
+    box-shadow: 19.37px 19.37px 60px rgba(249, 226, 226, 0.5);
+    border-radius: 30px;
 }
 
-.delete button{
-    color:#9a9a9a;
+.delete button {
+    color: #9a9a9a;
     border: none;
+    background: none;
 }
+
 .delete button:hover {
     color: #FB4F4F;
 }

@@ -110,7 +110,7 @@ class Sidebar extends Component {
                             </Link>
                         </li>
                         <li>
-                            <Link to="/MoneyManagement">
+                            <Link to="/Pemasukan">
                                 <span className="icon">
                                     <ion-icon name="cash-outline"></ion-icon>
                                 </span>

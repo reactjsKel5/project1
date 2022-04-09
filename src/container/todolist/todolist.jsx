@@ -86,7 +86,7 @@ class Todolist extends Component {
                     {/* Tulis content di bawah sini */}
                     <div className="m-md-5">
                         <div className="add-todolist">
-                            <div className="card">
+                            <div className="card-todolist">
                                 <div className="card-body">
                                     <form action="submit" className="m-2 row">
                                         <div className="col">
@@ -100,7 +100,7 @@ class Todolist extends Component {
                             </div>
                         </div>
                         <div className="todolist my-md-5">
-                            <div className="card">
+                            <div className="card-todolist">
                                 <div className="card-body m-4">
                                     <div className="row d-flex">
                                         <div className="col">

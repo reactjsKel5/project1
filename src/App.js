@@ -18,10 +18,10 @@ function App() {
         <Route exact path="/"><Dashboard /></Route>
         <Route exact path="/CollegeManagement"><MenuCM /></Route>
         <Route exact path="/MoneyManagement"><MenuMM /></Route>
-        <Route exact path="/Notes"><Notes /></Route>
-        <Route exact path="/Schedule"><Schedule /></Route>
-        <Route exact path="/Task"><Taskk /></Route>
-        <Route exact path="/Todolist"><Todolist /></Route>
+        <Route exact path="/CollegeManagement/Notes"><Notes /></Route>
+        <Route exact path="/CollegeManagement/Schedule"><Schedule /></Route>
+        <Route exact path="/CollegeManagement/Task"><Taskk /></Route>
+        <Route exact path="/CollegeManagement/Todolist"><Todolist /></Route>
         <Route exact path="/Pengeluaran"><Pengeluaran /></Route>
         <Route exact path="/Pemasukan"><Income /></Route>
       </Switch>

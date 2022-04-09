@@ -7,8 +7,8 @@ import Notes from "./container/notes/notes";
 import Schedule from "./container/schedule/schedule";
 import Taskk from "./container/task/task";
 import Todolist from './container/todolist/todolist';
-import Pengeluaran from './container/pengeluaran/pengeluaran';
 import Income from './container/income/income';
+import Outcome from './container/outcome/outcome';
 import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
 
 function App() {
@@ -22,7 +22,7 @@ function App() {
         <Route exact path="/CollegeManagement/Schedule"><Schedule /></Route>
         <Route exact path="/CollegeManagement/Task"><Taskk /></Route>
         <Route exact path="/CollegeManagement/Todolist"><Todolist /></Route>
-        <Route exact path="/Pengeluaran"><Pengeluaran /></Route>
+        <Route exact path="/Pengeluaran"><Outcome /></Route>
         <Route exact path="/Pemasukan"><Income /></Route>
       </Switch>
     </Router>

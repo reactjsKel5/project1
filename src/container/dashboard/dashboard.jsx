@@ -12,6 +12,7 @@ import {
     buildStyles
 } from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
+import { Link } from "react-router-dom";
 
 class Dashboard extends Component {
     state = {
@@ -81,7 +82,9 @@ class Dashboard extends Component {
                                                 return <DashboardSchedule key={data.id} waktu_mulai={data.waktu_mulai} waktu_berakhir={data.waktu_berakhir} nama_schedule={data.nama_schedule} />
                                             })
                                         }
+                                        <Link to="/CollegeManagement/Schedule">
                                         <button href="#" className="arrow float-end"><ion-icon name="chevron-forward-outline"></ion-icon></button>
+                                        </Link>
                                     </div>
                                 </div>
                                 <div className="task card mt-3">
@@ -92,7 +95,9 @@ class Dashboard extends Component {
                                                 return <DashboardTask key={data.id} detail_task={data.detail_task} tgl_ddline={data.tgl_ddline} />
                                             })
                                         }
+                                        <Link to="/CollegeManagement/Task">
                                         <button href="#" className="arrow float-end"><ion-icon name="chevron-forward-outline"></ion-icon></button>
+                                        </Link>
                                     </div>
                                 </div>
                             </div>
@@ -120,7 +125,9 @@ class Dashboard extends Component {
                                                 return <DashboardTodolist key={data.id} nama_todo={data.nama_todo} />
                                             })
                                         }
+                                        <Link to="/CollegeManagement/Todolist">
                                         <button className="btn btn-danger d-inline-block mt-4" onClick={this.insertIncome}>+</button>
+                                        </Link>
                                     </div>
                                 </div>
                             </div>

@@ -6,11 +6,17 @@ import Sidebar from "../../component/menubar/sidebar";
 import Topbar from "../../component/menubar/topbar";
 import Todolist from "../todolist/todolist";
 import './dashboard.css';
+import {
+    CircularProgressbar,
+    CircularProgressbarWithChildren,
+    buildStyles
+} from 'react-circular-progressbar';
+import 'react-circular-progressbar/dist/styles.css';
 
 class Dashboard extends Component {
     state = {
         schedule: [],
-        task:  [],
+        task: [],
         todolist: []
     }
     fetchSchedule = () => {
@@ -72,7 +78,7 @@ class Dashboard extends Component {
                                         </div>
                                         {
                                             this.state.schedule.map(data => {
-                                                return <DashboardSchedule key={data.id} waktu_mulai={data.waktu_mulai} waktu_berakhir={data.waktu_berakhir} nama_schedule={data.nama_schedule}/>
+                                                return <DashboardSchedule key={data.id} waktu_mulai={data.waktu_mulai} waktu_berakhir={data.waktu_berakhir} nama_schedule={data.nama_schedule} />
                                             })
                                         }
                                         <button href="#" className="arrow float-end"><ion-icon name="chevron-forward-outline"></ion-icon></button>
@@ -94,8 +100,19 @@ class Dashboard extends Component {
                                 <div className="card todolist">
                                     <div className="card-body mx-4 my-4">
                                         <p>Progress</p>
-                                        <div className="text-center my-5">
-                                            <img src={require("../../img/todolist-progressbar.png")} alt="progressbar" />
+                                        <div className="text-center my-5 mx-auto" style={{ width: 250, height: 250 }}>
+                                            <CircularProgressbarWithChildren
+                                                value={60}
+                                                className="text-center"
+                                                styles={buildStyles({
+                                                    pathColor: '#FB4F4F'
+                                                })}
+                                            >
+                                                <div style={{ fontSize: 52 }}>
+                                                    <strong>60%</strong>
+                                                </div>
+                                                <p style={{ color: '#887F96', marginBottom: -5, marginTop: -10 }}>Selesai</p>
+                                            </CircularProgressbarWithChildren>;
                                         </div>
                                         <p className="mb-4">Todolist</p>
                                         {

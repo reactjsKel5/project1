@@ -9,23 +9,29 @@ import Taskk from "./container/task/task";
 import Todolist from './container/todolist/todolist';
 import Income from './container/income/income';
 import Outcome from './container/outcome/outcome';
+import Login from './component/login';
 import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
+import { AuthProvider } from './component/auth/auth';
+import { RequireAuth } from './component/auth/requireAuth';
 
 function App() {
   return (
-    <Router>
-      <Switch>
-        <Route exact path="/"><Dashboard /></Route>
-        <Route exact path="/CollegeManagement"><MenuCM /></Route>
-        <Route exact path="/MoneyManagement"><MenuMM /></Route>
-        <Route exact path="/CollegeManagement/Notes"><Notes /></Route>
-        <Route exact path="/CollegeManagement/Schedule"><Schedule /></Route>
-        <Route exact path="/CollegeManagement/Task"><Taskk /></Route>
-        <Route exact path="/CollegeManagement/Todolist"><Todolist /></Route>
-        <Route exact path="/Pengeluaran"><Outcome /></Route>
-        <Route exact path="/Pemasukan"><Income /></Route>
-      </Switch>
-    </Router>
+    <AuthProvider>
+      <Router>
+        <Switch>
+          <Route exact path="/"><RequireAuth><Dashboard /></RequireAuth></Route>
+          <Route exact path="/CollegeManagement"><RequireAuth><MenuCM /></RequireAuth></Route>
+          <Route exact path="/MoneyManagement"><RequireAuth><MenuMM /></RequireAuth></Route>
+          <Route exact path="/CollegeManagement/Notes"><RequireAuth><Notes /></RequireAuth></Route>
+          <Route exact path="/CollegeManagement/Schedule"><RequireAuth><Schedule /></RequireAuth></Route>
+          <Route exact path="/CollegeManagement/Task"><RequireAuth><Taskk /></RequireAuth></Route>
+          <Route exact path="/CollegeManagement/Todolist"><RequireAuth><Todolist /></RequireAuth></Route>
+          <Route exact path="/Pengeluaran"><RequireAuth><Outcome /></RequireAuth></Route>
+          <Route exact path="/Pemasukan"><RequireAuth><Income /></RequireAuth></Route>
+          <Route exact path="/login"><Login /></Route>
+        </Switch>
+      </Router>
+    </AuthProvider>
   );
 }
 

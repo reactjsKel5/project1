@@ -88,7 +88,7 @@ class Outcome extends Component {
                     <Topbar />
 
                     {/* Tulis content di bawah sini */}
-                    <div className="content mx-md-5 my-5">
+                    <div className="outcome-container mx-md-5 my-5">
                         <div className="row d-flex mb-5">
                             <div className="col align-self-center">
                                 <h2>Money Management.</h2>

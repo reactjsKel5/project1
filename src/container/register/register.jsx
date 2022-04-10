@@ -1,5 +1,6 @@
 import { Component } from "react";
-import pictRegist from "./img/pict-regist.png";
+import { Link } from "react-router-dom";
+import pictRegist from "../../img/pict-regist.png";
 import "./register.css"
 
 class Register extends Component {
@@ -55,7 +56,7 @@ class Register extends Component {
 
             <div>
                 <main>
-                    <div className="row">
+                    <div className="row register">
                         <div className="col col-left p-5 text-center ">
                             <img src={pictRegist} className="m-auto" alt="gambar-regist" />
                             <h5>Mulai Atur Gaya Hidupmu</h5>
@@ -63,18 +64,19 @@ class Register extends Component {
                         </div>
 
                         <div className="col col-left text-center">
-                            <div className="card">
-                                <div className="card-body">
+                            <div className="card-register">
+                                <div className="card-body m-4">
                                     <h3>Buat Akun Baru</h3>
                                     <p>Lengkapi Data Diri Anda</p>
                                     
                                     <form >
-                                        <input type="text" placeholder="Masukkan Nama Lengkap" className="form-control mb-3 mt-5" id="nama_lengkap" name="nama_lengkap"  onChange={this.handleInsertData}/>
-                                        <input type="text" placeholder="Masukkan Nomor Telephone" className="form-control mb-3 " id="no_hp" name="no_hp" onChange={this.handleInsertData}/>
-                                        <input type="text" placeholder="Masukkan Email Anda" className="form-control mb-3 " id="email" name="email" aria-describedby="emailHelp" onChange={this.handleInsertData} />
-                                        <input type="password" placeholder="Masukkan Password" className="form-control mb-3" id="password" name="password" onChange={this.handleInsertData} />
+                                        <input type="text" placeholder="Masukkan Nama Lengkap" className="form-control mb-4 mt-5" id="nama_lengkap" name="nama_lengkap"  onChange={this.handleInsertData}/>
+                                        <input type="text" placeholder="Masukkan Nomor Telephone" className="form-control mb-4 " id="no_hp" name="no_hp" onChange={this.handleInsertData}/>
+                                        <input type="text" placeholder="Masukkan Email Anda" className="form-control mb-4 " id="email" name="email" aria-describedby="emailHelp" onChange={this.handleInsertData} />
+                                        <input type="password" placeholder="Masukkan Password" className="form-control mb-4" id="password" name="password" onChange={this.handleInsertData} />
 
-                                        <button type="submit" className="btn btn-primary mt-5" onClick={this.handleTombolDaftar}>DAFTAR</button>
+                                        <p className="to-login mt-5">Sudah punya akun? <Link to="/login"><a>Login</a></Link></p>
+                                        <button type="submit" className="btn btn-primary" onClick={this.handleTombolDaftar}>DAFTAR</button>
 
 
                                     </form>

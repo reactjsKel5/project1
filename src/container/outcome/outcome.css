@@ -2,7 +2,7 @@
     font-family: 'Poppins', 'Sans-serif';
 }
 
-.content h2 {
+.outcome-container h2 {
     font-weight: 600;
     font-size: 28px;
     color: #FB4F4F;
@@ -16,7 +16,7 @@
     box-shadow: 19.37px 19.37px 15px rgba(0, 0, 0, 0.1);
     border-radius: 50px;
 }
-
+.outcome-container
 .btn-tab-outcome {
     background: rgba(201, 95, 80, 0.27);
     border-radius: 22px;
@@ -39,13 +39,13 @@
     color: #464646;
 }
 
-.content h3 {
+.outcome-container h3 {
     font-size: 22px;
     color: #464646;
     font-weight: 600;
 }
 
-.content h5 {
+.outcome-container h5 {
     color: #ACACAC;
     font-weight: 400;
     font-size: 16px;
@@ -89,10 +89,10 @@
     border: 1px solid rgba(196, 196, 196, 0.71);
 }
 
-.btn-danger {
+.outcome-container .btn-danger {
     background: #FB4F4F;
     box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.25);
-    border-radius: 8px;
+    border-radius: 50px;
     height: 39px;
     width: 100%;
 }

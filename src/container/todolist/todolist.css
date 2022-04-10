@@ -34,25 +34,25 @@
     color: #FB4F4F;
 }
 
-.form-check-input {
+.todolist .form-check-input {
     border-radius: 50% !important;
     width: 27px;
     height: 27px;
     /* margin-top: -2.5px; */
 }
 
-.form-check-input:focus {
+.todolist .form-check-input:focus {
     box-shadow: none;
     border: 2px solid #9F9F9F;
 }
 
-.form-check-input:checked {
+.todolist .form-check-input:checked {
     border-color: #D7B1D7;
     background-color: #FB4F4F;
     /* padding: 13px; */
 }
 
-label .form-check-label {
+.todolist label .form-check-label {
     font-weight: 400;
     font-size: 16px;
     color: #464646;

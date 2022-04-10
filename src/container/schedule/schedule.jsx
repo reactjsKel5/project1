@@ -83,10 +83,10 @@ class Schedule extends Component {
                 {/* Tulis content di bawah sini */}
                 <div className="main">
                     <Topbar />
-                    <div className="m-md-5">
+                    <div className="m-md-5 schedule">
                         <div className="schedule-txt">Schedule.</div>
                         <div className="col-sm">
-                            <div className="card mb-3">
+                            <div className="card-schedule mb-3">
                                 <div className="card-body my-4 mx-3">
                                     <form action="" className="form-input">
                                         <h3 className="mb-3">Input : </h3>
@@ -141,7 +141,7 @@ class Schedule extends Component {
                             </nav>
                         </div>
                         <div className="col-sm">
-                            <div className="card">
+                            <div className="card-schedule">
                                 <div className="card-body my-4 mx-3">
                                     <form action="" className="form-data-schedule">
                                         <div class="card-body text-light">

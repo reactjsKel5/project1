@@ -13,6 +13,9 @@ import Login from './component/login';
 import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
 import { AuthProvider } from './component/auth/auth';
 import { RequireAuth } from './component/auth/requireAuth';
+import Profil from './container/profil/profil';
+import ProfilEdit from './container/profil_edit/profil_edit';
+import Register from './container/register/register';
 
 function App() {
   return (
@@ -29,6 +32,9 @@ function App() {
           <Route exact path="/Pengeluaran"><RequireAuth><Outcome /></RequireAuth></Route>
           <Route exact path="/Pemasukan"><RequireAuth><Income /></RequireAuth></Route>
           <Route exact path="/login"><Login /></Route>
+          <Route exact path="/register"><Register /></Route>
+          <Route exact path="/Profile"><Profil /></Route>
+          <Route exact path="/editProfile"><ProfilEdit /></Route>
         </Switch>
       </Router>
     </AuthProvider>

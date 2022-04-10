@@ -88,16 +88,16 @@ class Income extends Component {
                     <Topbar />
 
                     {/* Tulis content di bawah sini */}
-                    <div className="content mx-md-5 my-5">
+                    <div className="income-container mx-md-5 my-5">
                         <div className="row d-flex mb-5">
                             <div className="col align-self-center">
                                 <h2>Money Management.</h2>
                             </div>
                             <div className="col-auto col-sm">
-                                <div className="card card-tab-income float-end">
+                                <div className="card-tab-income float-end">
                                     <div className="card-body">
                                         <div className="btn btn-tab-income"><a href="#">Pemasukan</a></div>
-                                        <Link to="/Pengeluaran"><a className="ms-3 link-to-autcome" style={{ color: '#464646' }}>Pengeluaran</a></Link>
+                                        <Link to="/Pengeluaran"><a className="ms-3 link-to-outcome" style={{ color: '#464646' }}>Pengeluaran</a></Link>
                                     </div>
                                 </div>
                             </div>

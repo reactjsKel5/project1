@@ -121,7 +121,7 @@ function Sidebar() {
                         </Link>
                     </li>
                     <li>
-                        <Link to="/editProfile">
+                        <Link to="/Profile">
                             <span className="icon">
                                 <ion-icon name="person-circle-outline"></ion-icon>
                             </span>

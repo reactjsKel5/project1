@@ -15,46 +15,46 @@ class ProfilEdit extends Component {
                     <Topbar />
 
                     {/* Tulis content di bawah sini */}
-                    <div className="profil_edit">
-                        <div className="head">
-                            <h2>Edit Profile</h2>
+                    <div className="profile-edit m-md-5">
+                        <div className="head mb-4">
+                            <h2>Edit Profile.</h2>
                         </div>
-                        <div className="row">
-                            <div div className="col d-flex justify-content-center">
-                                <div className="card text-center">
-                                <div class="image mx-4">
-                                <img src={pict} className="m-auto" alt="login image" />
-                                <div className="btn">
-                                    <button type="submit" className="btn btn-primary ">Ubah Profil</button>
-                                    </div>
-                                </div>
-                                </div>
-                                <div div className="col d-flex justify-content-center">
-                                    <div className="form-edit">
-                                        <form action="submit">
-                                            <label htmlFor="nama" className="form-label ">Nama Lengkap</label>
-                                            <input type="text" className="form-control mb-3 mt-2" id="nama_lengkap" name="nama_lengkap" />
-
-                                            <label htmlFor="no-hp" className="form-label ">Nomor Telepon</label>
-                                            <input type="text" className="form-control mb-3 " id="no_hp" name="no_hp" />
-
-                                            <label htmlFor="email" className="form-label ">Email</label>
-                                            <input type="text" className="form-control mb-3 " id="email" name="email" aria-describedby="emailHelp" />
-
-                                            <label htmlFor="password" className="form-label ">Password</label>
-                                            <input type="password" className="form-control mb-3" id="password" name="password" />
-
-                                            <button type="submit" className="btn btn-danger">Hapus</button>
-                                            <button type="submit" className="btn btn-success ">Simpan</button>
-                                        </form>
-
+                        <div className="card-profile-edit">
+                            <div className="card-body m-4">
+                                <div class="image mx-4 text-center">
+                                    <img src={pict} alt="login image" />
+                                    <div className="d-block mt-4">
+                                        <button type="submit" className="btn btn-primary ">Ubah Profile</button>
                                     </div>
                                 </div>
                             </div>
-                            </div>
+                        </div>
+                        <div className="form-edit">
+                            <form action="submit">
+                                <label htmlFor="nama" className="form-label ">Nama Lengkap</label>
+                                <input type="text" className="form-control mb-4 " id="nama_lengkap" name="nama_lengkap" />
+
+                                <label htmlFor="no-hp" className="form-label ">Nomor Telepon</label>
+                                <input type="text" className="form-control mb-4 " id="no_hp" name="no_hp" />
+
+                                <label htmlFor="email" className="form-label ">Email</label>
+                                <input type="text" className="form-control mb-4 " id="email" name="email" aria-describedby="emailHelp" />
+
+                                <label htmlFor="password" className="form-label ">Password</label>
+                                <input type="password" className="form-control mb-4" id="password" name="password" />
+
+                                <div className="row button-section mt-5">
+                                    <div className="col">
+                                        <button type="submit" className="btn btn-outline-danger">Hapus</button>
+                                    </div>
+                                    <div className="col">
+                                        <button type="submit" className="btn btn-danger-profile-edit float-end">Simpan</button></div>
+                                </div>
+                            </form>
                         </div>
                     </div>
                 </div>
+            </div>
         );
     }
 }

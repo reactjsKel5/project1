@@ -33,13 +33,13 @@
     border-radius: 11px;
 }
 
-.card {
+.card-schedule {
     border: 1px solid rgba(0, 0, 0, 0.22);
     box-sizing: border-box;
     border-radius: 22px;
 }
 
-.btn-tambah {
+.card-schedule .btn-tambah {
     background: #FB4F4F;
     border: 1px solid rgba(196, 196, 196, 0.71);
     box-sizing: border-box;

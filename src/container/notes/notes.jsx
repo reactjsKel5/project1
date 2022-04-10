@@ -79,7 +79,7 @@ export class Notes extends Component {
                 <div className="main">
                     <Topbar/>
 
-                    <div className="m-md-5">
+                    <div className="m-md-5 notes">
                         <div className="search-notes">
                             {/* <div className="card">
                                 <div className="card-body"> */}
@@ -112,7 +112,7 @@ export class Notes extends Component {
                                 </div>
                             </div>
                             <div className="col-md-5 col-sm">
-                                <div className="add-notes card">
+                                <div className="add-notes card-notes">
                                     <div className="card-body my-4 mx-3">
                                         <form action="submit">
                                             <input type="text" className="form-control px-4 mb-3" name="judul_note" id="judul_note" placeholder="Judul Note" onChange={this.handleChangeInsert} />

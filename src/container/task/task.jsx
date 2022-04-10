@@ -2,12 +2,13 @@ import React, { Component } from "react";
 import Sidebar from "../../component/menubar/sidebar";
 // import Task from "../../component/menubar/taskdel";
 import Topbar from "../../component/menubar/topbar";
+import Taskk from "../../component/task";
 import "./task.css";
 
-class Taskk extends Component {
+class Task extends Component {
     state = {
         task: [],
-        insertTask: {
+        insertTaskk: {
             id: 1,
             uid: 1,
             jenis: "",
@@ -39,26 +40,17 @@ class Taskk extends Component {
             })
     }
 
-    deleteTask = () => {
-        fetch(`http://localhost:3001/task`, {
-            method: 'DELETE'
-        })
-            .then(json => {
-                this.fetchTask()
-            })
-    }
-
     handleChangeInsert = (event) => {
-        let insertTasktData = { ...this.state.inserttask };
+        let insertTaskData = { ...this.state.insertTaskk };
         let timestamp = new Date().getTime();
-        insertTasktData['id'] = timestamp;
-        insertTasktData[event.target.name] = event.target.value;
+        insertTaskData['id'] = timestamp;
+        insertTaskData[event.target.name] = event.target.value;
         this.setState({
-            inserttask: insertTasktData
+            insertTaskk: insertTaskData
         });
     }
 
-    insertTodolist = (event) => {
+    insertTask = (event) => {
         event.preventDefault();
         fetch('http://localhost:3001/task', {
             method: 'POST',
@@ -66,26 +58,24 @@ class Taskk extends Component {
                 'Accept' : 'application/json',
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify(this.state.inserttask)
+            body: JSON.stringify(this.state.insertTaskk)
         })
             .then(response => response.json())
             .then(json => this.fetchTask())
     }
-
+    
     render() {
         return (
-            <div>
-                <Sidebar/>
-                <div className="main">
-                    <Topbar/>
-
+        <div>
+            <Sidebar/>
+            <div className="main">
+                <Topbar/>
+                
                     <div className="m-md-5">
-                        <div className="add-todolist">
-                            <div className="card">
-                                <div className="card-body">
-                                    <form action="submit" className="m-2 row">
-                                        <div className="col">
-                                            <input type="text" className="form-control px-4" name="nama_todo" id="nama_todo" placeholder="Ketikkan disini ..." onChange={this.handleChangeInsert} />
+                        <div className="card-main">
+                            <div className="card-body">
+                                <form action="submit" className="m-2 row">
+                                    <div className="col"><input type="text" className="form-group px-4" name="nama_task" id="nama_task" placeholder="Ketikkan disini ..." onChange={this.handleChangeInsert} />
                                         </div>
                                         <div className="col-md-auto col-sm align-self-center">
                                             <button className="btn btn-danger d-inline-block" >Cari</button>
@@ -93,59 +83,42 @@ class Taskk extends Component {
                                     </form>
                                 </div>
                             </div>
-                        </div>
+                            </div>
 
-                        <div className="todolist my-md-3">
-                            <div className="card">
-                                <div className="card-body m-2">
-                                    <div className="row d-flex">
+                            <div className="row">
+                            <div className="col-md-5 col-sm-10 mb-2">
+                                <div className="card-min">
+                                    <div className="card-body my-4 mx-3">
+                                        <form action="submit" className="m-2 col">
                                         <div className="col">
-                                        <form action="submit" className="m-2 row">
-                                        <div className="col">
-                                        <select id="typeTaskSelect" class="form-select text-secondary" name="jenis" onChange={this.handleChangeInsert}>
-                                <option value="1">Quiz</option>
-                                <option value="2">Assignment</option>
+                                        <select class="form-select text-secondary" name="jenis" id="jenis" onChange={this.handleChangeInsert}>
+                                <option value="Quiz">Quiz</option>
+                                <option value="Assignment">Assignment</option>
                             </select>
-                            <div className="m-3 row">
-                                            <input type="date" className="form-control px-4" name="tgl_ddline" id="tgl_ddline" onChange={this.handleChangeInsert}/>
-
+                            <div className="m-2 row">
                                             </div>
-                                            <input type="text" className="form-control px-4" name="detail_task" id="detail_task" onChange={this.handleChangeInsert}/>
+                                            <input type="date" className="form-control px-4" name="tgl_ddline" id="tgl_ddline" onChange={this.handleChangeInsert}/>
+                                            <div className="m-2 row">
+                                            </div>
+                                            <textarea type="text" className="form-control px-4" placeholder="Detail" name="detail_task" id="detail_task" onChange={this.handleChangeInsert}/>
                                             <div className="m-3 row">
-                                            <button className="btn btn-danger d-inline-block" onClick={this.insertTasktData}>Tambah</button></div>
+                                            <button className="btn btn-primary d-inline-block" onClick={this.insertTask}>Tambah</button></div>
                                         </div>
                                         </form>
                                         </div>
                                 </div>
                             </div>
-                        </div>
-                    </div>
 
-                    <div className="row">
-                        {
-                        this.state.task.map(task => {
-                            return <Task key={task.id} uid={task.uid} todo={task.jenis} id={task.id} delete={this.deleteTask}/>
-                        })
-                        }
-                        </div>
-
-                    <div className="todolist my-md-3">
-                            <div className="card">
-                                <div className="card-body m-2">
-                                    <div className="row d-flex">
+                    <div className="col-md-5 col-sm-5 mb-2">
+                            <div className="card-max">
+                                <div className="card-body">
+                                    <div className="col d-flex">
                                         <div className="col">
-                                            <a href="#"><img src="#" class="float-end" alt="ic_close"/></a>
-                                            <div class="form-check mb-1">
-                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"/>
-                                                <label class="form-check-label" for="flexCheckDefault">Quiz</label>
-                                            </div>
-                                            <div class="row m-0">
-                                                <div class="col">
-                                                    <p class="mt-1 mb-2">Tes tes</p>
-                                                </div>
-                                                <div class="col-auto align-self-center">
-                                                    <small>25/03/2022</small>
-                                                </div>
+                                        {
+                                        this.state.task.map(taskk=> {
+                                            return <Taskk key={taskk.id} uid={taskk.uid} jenis={taskk.jenis} tgl_ddline={taskk.tgl_ddline} detail_task={taskk.detail_task} id={taskk.id} delete={this.deleteTask}/>
+                                        })
+                                        }
                                             </div>
                                         </div>
                                     </div>
@@ -154,9 +127,9 @@ class Taskk extends Component {
                                     </div>
                                     </div>
                                     </div>
-                                    </div>
+                                    
         );
     }
 }
 
-export default Taskk;
+export default Task;

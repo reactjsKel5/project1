@@ -1,6 +1,6 @@
 import React from "react";
 
-function Task(props) {
+function Taskk(props) {
     return (
         <div className="form-check mb-4">
             <input className="form-check-input" type="checkbox" value="status" id="status" />
@@ -17,5 +17,4 @@ function Task(props) {
         </div>
     );
 }
-
-export default Task;
+export default Taskk;

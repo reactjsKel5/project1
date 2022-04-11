@@ -1,11 +1,25 @@
 {
-"task" : [
+  "task": [
     {
-      "id_task": 1, 
+      "id_task": 1,
       "uid": 1,
-      "detail_task": "Mobile App Tugas",
+      "jenis": "Assigment",
       "tgl_ddline": "2022-05-30",
-      "jenis": "Task"
+      "detail_task": "Laporan Mobile App"
+    },
+    {
+      "id": 1649654699576,
+      "uid": 1,
+      "jenis": "Assignment",
+      "tgl_ddline": "2022-04-14",
+      "detail_task": "Laporan WEB Redux"
+    },
+    {
+      "id": 1649654730599,
+      "uid": 1,
+      "jenis": "Quiz",
+      "tgl_ddline": "2022-04-16",
+      "detail_task": "Tugas kewirausahaan ide bisnis"
     }
   ]
 }

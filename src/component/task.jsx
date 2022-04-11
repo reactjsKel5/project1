@@ -5,7 +5,9 @@ function Taskk(props) {
         <div className="form-check mb-3">
             <input className="form-check-input" type="checkbox" value="status" id="status" />
             <label className="form-check-label ms-3" for="task1">
-                {props.detail_task}
+                <h6 className="card-title float-none"><b>{props.jenis}</b></h6>
+                <h6>{props.detail_task}</h6>
+                <p>{props.tgl_ddline}</p>
             </label>
             <button className="btn-delete-task float-end" onClick={
                 () => {
@@ -17,4 +19,5 @@ function Taskk(props) {
         </div>
     );
 }
+
 export default Taskk;

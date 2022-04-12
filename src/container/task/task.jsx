@@ -91,6 +91,7 @@ class Task extends Component {
                                     <div className="card-body my-4 mx-3">
                                         <form action="submit" className="m-2">
                                             <select class="form-select text-secondary my-3 px-4" name="jenis" id="jenis" onChange={this.handleChangeInsert}>
+                                                <option value="0">--</option>
                                                 <option value="Quiz">Quiz</option>
                                                 <option value="Assignment">Assignment</option>
                                             </select>

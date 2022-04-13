@@ -51,7 +51,7 @@ class Income extends Component {
     handleDelete = (id) => {
         fetch(`http://localhost:3001/pemasukan/${id}`, { method: 'DELETE' })
             .then(res => {
-                this.getOutcome()
+                this.getIncome()
             })
     }
 
@@ -77,7 +77,7 @@ class Income extends Component {
             body: JSON.stringify(this.state.addIncome)
         })
             .then(response => response.json())
-            .then(json => this.getIncome)
+            .then(json => this.getIncome())
     }
 
     render() {

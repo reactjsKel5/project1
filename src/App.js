@@ -33,8 +33,8 @@ function App() {
           <Route exact path="/Pemasukan"><RequireAuth><Income /></RequireAuth></Route>
           <Route exact path="/login"><Login /></Route>
           <Route exact path="/register"><Register /></Route>
-          <Route exact path="/Profile"><Profil /></Route>
-          <Route exact path="/editProfile"><ProfilEdit /></Route>
+          <Route exact path="/Profile"><RequireAuth><Profil /></RequireAuth></Route>
+          <Route exact path="/editProfile"><RequireAuth><ProfilEdit /></RequireAuth></Route>
         </Switch>
       </Router>
     </AuthProvider>

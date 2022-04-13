@@ -41,14 +41,14 @@ class Schedule extends Component {
             })
     }
 
-    deleteSchedule = () => {
-        fetch(`http://localhost:3001/schedule`, {
-            method: 'DELETE'
-        })
-            .then(json => {
-                this.fetchSchedule()
-            })
-    }
+    // deleteSchedule = () => {
+    //     fetch(`http://localhost:3001/schedule`, {
+    //         method: 'DELETE'
+    //     })
+    //         .then(json => {
+    //             this.fetchSchedule()
+    //         })
+    // }
 
     handleChangeInsert = (event) => {
         let insertScheduleData = {...this.state.insertSchedule}

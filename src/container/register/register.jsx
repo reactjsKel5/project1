@@ -52,8 +52,7 @@ class Register extends Component {
 
     render() {
         return (
-
-
+            
             <div>
                 <main>
                     <div className="row register">

@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import Sidebar from "../../component/menubar/sidebar";
-import Topbar from "../../component/menubar/topbar";
+import Sidebar from "../../components/menubar/sidebar";
+import Topbar from "../../components/menubar/topbar";
 import './menuCM.css';
 import {Link} from "react-router-dom";
 

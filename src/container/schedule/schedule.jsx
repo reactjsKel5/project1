@@ -1,48 +1,40 @@
 import React, { Component } from "react";
-import Sidebar from "../../component/menubar/sidebar";
-import Topbar from "../../component/menubar/topbar";
-import ScheduleProps from "../../component/scheduleprops";
+import Sidebar from "../../components/menubar/sidebar";
+import Topbar from "../../components/menubar/topbar";
+import ScheduleProps from "../../components/scheduleprops";
 import './schedule.css';
+import { addDoc, collection } from "firebase/firestore"; 
 
 class Schedule extends Component {
 
-    state = {
-        schedule: [],
-        insertSchedule : {
-            uid: 2,
-            id: 1,
-            waktu_mulai : 0,
-            waktu_berakhir: 0,
-            nama_schedule: ""
-        }
-    }
+    // state = {
+    //     schedule: [],
+    //     insertSchedule : {
+    //         uid: 2,
+    //         id: 1,
+    //         waktu_mulai : 0,
+    //         waktu_berakhir: 0,
+    //         nama_schedule: ""
+    //     }
+    // }
 
-    //get Schedule
-    fetchSchedule = () => {
-        fetch('http://localhost:3001/schedule')
-            .then(response => response.json())
-            .then(json => {
-                this.setState({
-                    schedule: json
-                })
-            })
-    }
+    // //get Schedule
+    // fetchSchedule = () => {
+    //     fetch('http://localhost:3001/schedule')
+    //         .then(response => response.json())
+    //         .then(json => {
+    //             this.setState({
+    //                 schedule: json
+    //             })
+    //         })
+    // }
 
-    componentDidMount() {
-        this.fetchSchedule()
-    }
+    // componentDidMount() {
+    //     this.fetchSchedule()
+    // }
 
-    deleteSchedule = (id) => {
-        fetch(`http://localhost:3001/schedule/${id}`, {
-            method: 'DELETE'
-        })
-            .then(json => {
-                this.fetchSchedule()
-            })
-    }
-
-    // deleteSchedule = () => {
-    //     fetch(`http://localhost:3001/schedule`, {
+    // deleteSchedule = (id) => {
+    //     fetch(`http://localhost:3001/schedule/${id}`, {
     //         method: 'DELETE'
     //     })
     //         .then(json => {
@@ -50,29 +42,38 @@ class Schedule extends Component {
     //         })
     // }
 
-    handleChangeInsert = (event) => {
-        let insertScheduleData = {...this.state.insertSchedule}
-        let timestamp = new Date().getTime()
-        insertScheduleData['id'] = timestamp
-        insertScheduleData[event.target.name] = event.target.value
-        this.setState({
-            insertSchedule: insertScheduleData
-        })
-    }
+    // // deleteSchedule = () => {
+    // //     fetch(`http://localhost:3001/schedule`, {
+    // //         method: 'DELETE'
+    // //     })
+    // //         .then(json => {
+    // //             this.fetchSchedule()
+    // //         })
+    // // }
 
-    addSchedule = (event) => {
-        event.preventDefault()
-        fetch('http://localhost:3001/schedule', {
-            method: 'POST',
-            headers: {
-                'Accept': 'application/json',
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(this.state.insertSchedule)
-        })
-            .then(response => response.json())
-            .then(json => this.fetchSchedule())
-    }
+    // handleChangeInsert = (event) => {
+    //     let insertScheduleData = {...this.state.insertSchedule}
+    //     let timestamp = new Date().getTime()
+    //     insertScheduleData['id'] = timestamp
+    //     insertScheduleData[event.target.name] = event.target.value
+    //     this.setState({
+    //         insertSchedule: insertScheduleData
+    //     })
+    // }
+
+    // addSchedule = (event) => {
+    //     event.preventDefault()
+    //     fetch('http://localhost:3001/schedule', {
+    //         method: 'POST',
+    //         headers: {
+    //             'Accept': 'application/json',
+    //             'Content-Type': 'application/json'
+    //         },
+    //         body: JSON.stringify(this.state.insertSchedule)
+    //     })
+    //         .then(response => response.json())
+    //         .then(json => this.fetchSchedule())
+    // }
 
     render() {
         return (
@@ -94,7 +95,7 @@ class Schedule extends Component {
                                             <div class="col-md">
                                                 <div class="mb-4">
                                                     <label for="day" class="text-secondary">Hari</label>
-                                                    <select id="inputHari" class="form-select" onChange={this.handleChangeInsert}>
+                                                    <select id="inputHari" class="form-select">
                                                         <option>Senin</option>
                                                         <option>Selasa</option>
                                                         <option>Rabu</option>
@@ -106,21 +107,21 @@ class Schedule extends Component {
                                                 </div>
                                                 <div class="mb-4">
                                                     <label for="namaJadwal" class="text-secondary">Nama Jadwal</label>
-                                                    <input type="text" class="form-control" name="nama_schedule" id="nama_schedule" placeholder="..." onChange={this.handleChangeInsert} />
+                                                    <input type="text" class="form-control" name="nama_schedule" id="nama_schedule" placeholder="..."  />
                                                 </div>
                                             </div>
                                             <div class="col-md">
                                                 <div class="mb-4">
                                                     <label for="waktuMulai" class="text-secondary">Waktu Mulai</label>
-                                                    <input type="time" class="form-control" name="waktu_mulai" id="waktu_mulai" onChange={this.handleChangeInsert} />
+                                                    <input type="time" class="form-control" name="waktu_mulai" id="waktu_mulai"  />
                                                 </div>
                                                 <div class="mb-4">
                                                     <label for="waktuBerakhir" class="text-secondary">Waktu Berakhir</label>
-                                                    <input type="time" class="form-control" name="waktu_berakhir" id="waktu_berakhir" onChange={this.handleChangeInsert}/>
+                                                    <input type="time" class="form-control" name="waktu_berakhir" id="waktu_berakhir"/>
                                                 </div>
                                                 <div className="row">
                                                     <div className="col-md-12 text-end" >
-                                                        <button className="btn-tambah" onClick={this.addSchedule}>Tambah</button>
+                                                        <button className="btn-tambah">Tambah</button>
                                                     </div>
                                                 </div>
                                             </div>
@@ -143,20 +144,13 @@ class Schedule extends Component {
                         <div className="col-sm">
                             <div className="card-schedule">
                                 <div className="card-body my-4 mx-3">
-                                    <form action="" className="form-data-schedule">
                                         <div class="card-body text-light">
                                             <div class="judul row title-schedule mb-5">
                                                 <div class="col-4">Waktu</div>
                                                 <div class="col-6">Jadwal</div>
                                                 <div class="col-2"></div>
                                             </div>
-                                            {
-                                                this.state.schedule.map((data) => {
-                                                  return  <ScheduleProps id={data.id} key={data.id} nama={data.nama_schedule} waktu_mulai={data.waktu_mulai} waktu_berakhir={data.waktu_berakhir} delete={this.deleteSchedule}/>
-                                                })
-                                            }
                                         </div>
-                                    </form>
                                 </div>
                             </div>
                         </div>

@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
-import Sidebar from "../../component/menubar/sidebar"
-import Topbar from "../../component/menubar/topbar"
+import Sidebar from "../../components/menubar/sidebar"
+import Topbar from "../../components/menubar/topbar"
 // import Todo from "../../component/todo"
 import './notes.css';
-import Note from "../../component/note"
+import Note from "../../components/note"
 
 export class Notes extends Component {
 

@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import Sidebar from "../../component/menubar/sidebar";
-import Topbar from "../../component/menubar/topbar";
+import Sidebar from "../../components/menubar/sidebar";
+import Topbar from "../../components/menubar/topbar";
 import './menuMM.css';
 import {Link} from "react-router-dom";
 
@@ -13,7 +13,7 @@ class MenuMM extends Component {
                     <Topbar />
 
                     {/* Tulis content di bawah sini */}
-                    <div className="money-management m-5">
+                    <div className="money-management m-5">s
                         <h2>Money Management.</h2>
                         <div className="row my-5">
                             <div className="col">

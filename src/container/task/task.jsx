@@ -1,68 +1,68 @@
 import React, { Component } from "react";
-import Sidebar from "../../component/menubar/sidebar";
+import Sidebar from "../../components/menubar/sidebar";
 // import Task from "../../component/menubar/taskdel";
-import Topbar from "../../component/menubar/topbar";
+import Topbar from "../../components/menubar/topbar";
 import Taskk from "../../component/task";
 import "./task.css";
 
 class Task extends Component {
-    state = {
-        task: [],
-        insertTaskk: {
-            id: 1,
-            uid: 1,
-            jenis: "",
-            tgl_ddline: "",
-            detail_task: ""
-        }
-    }
+    // state = {
+    //     task: [],
+    //     insertTaskk: {
+    //         id: 1,
+    //         uid: 1,
+    //         jenis: "",
+    //         tgl_ddline: "",
+    //         detail_task: ""
+    //     }
+    // }
 
-    fetchTask = () => {
-        fetch('http://localhost:3001/task?_sort=id_task8&_order=desc')
-            .then(response => response.json())
-            .then(json => {
-                this.setState({
-                    task: json
-                })
-            })
-    }
+    // fetchTask = () => {
+    //     fetch('http://localhost:3001/task?_sort=id_task8&_order=desc')
+    //         .then(response => response.json())
+    //         .then(json => {
+    //             this.setState({
+    //                 task: json
+    //             })
+    //         })
+    // }
 
-    componentDidMount() {
-        this.fetchTask()
-    }
+    // componentDidMount() {
+    //     this.fetchTask()
+    // }
 
-    deleteTask = (id_task) => {
-        fetch(`http://localhost:3001/task/${id_task}`, {
-            method: 'DELETE'
-        })
-            .then(json => {
-                this.fetchTask()
-            })
-    }
+    // deleteTask = (id_task) => {
+    //     fetch(`http://localhost:3001/task/${id_task}`, {
+    //         method: 'DELETE'
+    //     })
+    //         .then(json => {
+    //             this.fetchTask()
+    //         })
+    // }
 
-    handleChangeInsert = (event) => {
-        let insertTaskData = { ...this.state.insertTaskk };
-        let timestamp = new Date().getTime();
-        insertTaskData['id'] = timestamp;
-        insertTaskData[event.target.name] = event.target.value;
-        this.setState({
-            insertTaskk: insertTaskData
-        });
-    }
+    // handleChangeInsert = (event) => {
+    //     let insertTaskData = { ...this.state.insertTaskk };
+    //     let timestamp = new Date().getTime();
+    //     insertTaskData['id'] = timestamp;
+    //     insertTaskData[event.target.name] = event.target.value;
+    //     this.setState({
+    //         insertTaskk: insertTaskData
+    //     });
+    // }
 
-    insertTask = (event) => {
-        event.preventDefault();
-        fetch('http://localhost:3001/task', {
-            method: 'POST',
-            headers: {
-                'Accept': 'application/json',
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(this.state.insertTaskk)
-        })
-            .then(response => response.json())
-            .then(json => this.fetchTask())
-    }
+    // insertTask = (event) => {
+    //     event.preventDefault();
+    //     fetch('http://localhost:3001/task', {
+    //         method: 'POST',
+    //         headers: {
+    //             'Accept': 'application/json',
+    //             'Content-Type': 'application/json'
+    //         },
+    //         body: JSON.stringify(this.state.insertTaskk)
+    //     })
+    //         .then(response => response.json())
+    //         .then(json => this.fetchTask())
+    // }
 
     render() {
         return (

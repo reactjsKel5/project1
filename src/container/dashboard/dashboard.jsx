@@ -1,10 +1,10 @@
 import React, { Component } from "react";
-import DashboardSchedule from "../../component/dashboard/dashboardSchedule";
-import DashboardTask from "../../component/dashboard/dashboardTask";
-import DashboardTodolist from "../../component/dashboard/dashboardTodolist";
-import Sidebar from "../../component/menubar/sidebar";
-import Topbar from "../../component/menubar/topbar";
-import Todolist from "../todolist/todolist";
+import DashboardSchedule from "../../components/dashboard/dashboardSchedule";
+import DashboardTask from "../../components/dashboard/dashboardTask";
+import DashboardTodolist from "../../components/dashboard/dashboardTodolist";
+import Sidebar from "../../components/menubar/sidebar";
+import Topbar from "../../components/menubar/topbar";
+// import Todolist from "../todolist/todolist";
 import './dashboard.css';
 import {
     CircularProgressbar,
@@ -53,8 +53,10 @@ class Dashboard extends Component {
         this.fetchTodolist()
     }
 
+
     render() {
         return (
+
             <div>
                 <Sidebar />
                 <div className="main">
@@ -83,7 +85,7 @@ class Dashboard extends Component {
                                             })
                                         }
                                         <Link to="/CollegeManagement/Schedule">
-                                        <button href="#" className="arrow float-end"><ion-icon name="chevron-forward-outline"></ion-icon></button>
+                                            <button href="#" className="arrow float-end"><ion-icon name="chevron-forward-outline"></ion-icon></button>
                                         </Link>
                                     </div>
                                 </div>
@@ -96,7 +98,7 @@ class Dashboard extends Component {
                                             })
                                         }
                                         <Link to="/CollegeManagement/Task">
-                                        <button href="#" className="arrow float-end"><ion-icon name="chevron-forward-outline"></ion-icon></button>
+                                            <button href="#" className="arrow float-end"><ion-icon name="chevron-forward-outline"></ion-icon></button>
                                         </Link>
                                     </div>
                                 </div>
@@ -126,7 +128,7 @@ class Dashboard extends Component {
                                             })
                                         }
                                         <Link to="/CollegeManagement/Todolist">
-                                        <button className="btn btn-danger d-inline-block mt-4" onClick={this.insertIncome}>+</button>
+                                            <button className="btn btn-danger d-inline-block mt-4" onClick={this.insertIncome}>+</button>
                                         </Link>
                                     </div>
                                 </div>
